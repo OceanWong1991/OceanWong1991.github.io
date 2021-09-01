@@ -21,12 +21,6 @@
   \homepage[OceanWong]{https://oceanwong1991.github.io/}}
  
 
-% • 7+ years of experience in Machine Learning, Deep Learning, and Computer Vision
-% • Research experience both in the industry and academic settings.
-% • Experience in handling a variety of projects from concept to completion.
-% • Strong leadership, communication, and teamwork skills.
-% • Quick learning abilities and result oriented approach. 
-
 \section{\faUsers\ 工作/项目经历}
 \datedsubsection{\textbf{北京双髻鲨科技有限公司}  北京}{2015年6月 -- 至今}
 \role{AI研发部经理}
@@ -44,13 +38,13 @@
 商用车盲区检测系统(BSD)主要是对商用车盲区行人跟车辆的检测,当驾驶员变道或泊车时提供视觉或声音上的提示,帮助驾驶员安全驾驶.由于模型需要在低端车机芯片上运行,因此需要严格的控制模型大小并且保证检出结果的准确性.
 
 \begin{itemize}
-  \item 1.设计数据处理,分析模块.针对鱼眼视图数据设计出一套自动数据打标签系统,提升90\%+ 数据标注效率;根据回传数据主动分析模型盲点,针对性添加数据增强模型鲁棒性并最大化避免对有效数据的稀释
-  \item 2.设计并训练主要的检测模型.(1.backbone 的变化, 2. YOLOV5 anchor匹配机制, 3.Mosic及Mixup 数据增广的使用, 4.YOLOX Decouple head:reg, cls, obj)
-  \item 3.模型优化.为了使模型能够在低端芯片上运行(例如:全志T5),对模型进行了最大化剪枝,最终使模型的计算量由1.2BFlops减至0.139 BFlops,mAP由90\% 增加至 95\%
+  \item 设计数据处理,分析模块.针对鱼眼视图数据设计出一套自动数据打标签系统,提升90\%+ 数据标注效率;根据回传数据主动分析模型盲点,针对性添加数据增强模型鲁棒性并最大化避免对有效数据的稀释
+  \item 设计并训练主要的检测模型.(1.backbone 的变化, 2. YOLOV5 anchor匹配机制, 3.Mosic及Mixup 数据增广的使用, 4.YOLOX Decouple head:reg, cls, obj)
+  \item 模型优化.为了使模型能够在低端芯片上运行(例如:全志T5),对模型进行了最大化剪枝,最终使模型的计算量由1.2BFlops减至0.139 BFlops,mAP由90\% 增加至 95\%
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 巡航机器人}}{2019 年12月 -- 2020年 5月}
+\datedsubsection{\textbf{ 巡航机器人}}{2019 年12月 -- 2020年 5月}
 \role{Python, ROS}
 
 \begin{onehalfspacing}
@@ -62,15 +56,16 @@
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 巡航机器人}}{2019 年12月 -- 2020年 5月}
-\role{Python, ROS}
+\datedsubsection{\textbf{ 驾驶员疲劳检测系统(DSM)}}{2019 年2月 -- 2020年 12月}
+\role{Python, caffe}
 
 \begin{onehalfspacing}
-巡航机器人:使用雷达,IMU,Camera,Odometry等传感器,实现构建地图,主动避障,定点巡航功能
+DSM:使用红外相机图片对驾驶员行为进行检测分析(分神,打瞌睡,抽烟,打电话等)
 \begin{itemize}
-  \item 设计机器人底盘
-  \item 构建Unicycle Robot Model(一万向轮,两驱动轮). 并标定机器人底盘
-  \item 部署,调试 google-cartographer, ros-navigation 算法.
+  \item 设计驾驶员人脸,关键点及行为检测神经网络
+  \item 神经网络搭建,使用TensorFlow
+  \item 训练网络,采用Online Hard Example Mining,数据增广等一系列技巧,将准确率从98\% 提升至 99.3\%.
+  \item 部署并优化算法.采用一些传统算法及策略(例如:光流追踪)将检测帧率由5HZ 提升至 26HZ(Rock Chip RK3399)
 \end{itemize}
 \end{onehalfspacing}
 
@@ -78,7 +73,7 @@
 
 \section{\faHeartO\ 获奖情况}
 \begin{itemize}[parsep=0.5ex]
-\item {\datedline{\textit{Competition Expert Tier. TOP 0.67\%(1072/159,193)}}{2019.12}}
+\item {\datedline{\textit{获得专家头衔(kaggle). TOP 0.67\%(1072/159,193)}}{2019.12}}
 \item {\datedline{\textit{个人银牌, PB Top 6\%(30/546)} Lyft 3D Object Detection for Autonomous Vehicles Kaggle Competition}{ 2019.12}}
 \item {\datedline{\textit{LB Top 7\%(182/2427); PB Top 13\%(301/2427)} Severstal: Steel Defect Detection Kaggle Competition}{2019.10}}
 \item {\datedline{\textit{个人银牌, PB Top 2\%(55/2928).} APTOS 2019 Blindness Detection Competition Kaggle Competition}{ 2019.9}}
