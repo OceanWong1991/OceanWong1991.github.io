@@ -28,7 +28,7 @@
 % • Quick learning abilities and result oriented approach. 
 
 \section{\faUsers\ 工作/项目经历}
-\datedsubsection{\textbf{北京双髻鲨科技有限公司} 北京}{2015年5月 -- 至今}
+\datedsubsection{\textbf{北京双髻鲨科技有限公司}  北京}{2015年6月 -- 至今}
 \role{AI研发部经理}
 
 \begin{itemize}
@@ -38,66 +38,78 @@
   \item 很强的学习,调研能力;并以结果为导向解决工程性问题
 \end{itemize}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
+\datedsubsection{\textbf{商用车盲区监测}}{2020年2月 -- 至今}
+\role{Python, Darknet, Pytorch, Linux}{项目负责人}
 \begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
+商用车盲区检测系统(BSD)主要是对商用车盲区行人跟车辆的检测,当驾驶员变道或泊车时提供视觉或声音上的提示,帮助驾驶员安全驾驶.由于模型需要在低端车机芯片上运行,因此需要严格的控制模型大小并且保证检出结果的准确性.
+
 \begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
+  \item 1.设计数据处理,分析模块.针对鱼眼视图数据设计出一套自动数据打标签系统,提升90\%+ 数据标注效率;根据回传数据主动分析模型盲点,针对性添加数据增强模型鲁棒性并最大化避免对有效数据的稀释
+  \item 2.设计并训练主要的检测模型.(1.backbone 的变化, 2. YOLOV5 anchor匹配机制, 3.Mosic及Mixup 数据增广的使用, 4.YOLOX Decouple head:reg, cls, obj)
+  \item 3.模型优化.为了使模型能够在低端芯片上运行(例如:全志T5),对模型进行了最大化剪枝,最终使模型的计算量由1.2BFlops减至0.139 BFlops,mAP由90\% 增加至 95\%
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
+\datedsubsection{\textbf{\LaTeX\ 巡航机器人}}{2019 年12月 -- 2020年 5月}
+\role{Python, ROS}
+
 \begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+巡航机器人:使用雷达,IMU,Camera,Odometry等传感器,实现构建地图,主动避障,定点巡航功能
 \begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
+  \item 设计机器人底盘
+  \item 构建Unicycle Robot Model(一万向轮,两驱动轮). 并标定机器人底盘
+  \item 部署,调试 google-cartographer, ros-navigation 算法.
 \end{itemize}
 \end{onehalfspacing}
+
+\datedsubsection{\textbf{\LaTeX\ 巡航机器人}}{2019 年12月 -- 2020年 5月}
+\role{Python, ROS}
+
+\begin{onehalfspacing}
+巡航机器人:使用雷达,IMU,Camera,Odometry等传感器,实现构建地图,主动避障,定点巡航功能
+\begin{itemize}
+  \item 设计机器人底盘
+  \item 构建Unicycle Robot Model(一万向轮,两驱动轮). 并标定机器人底盘
+  \item 部署,调试 google-cartographer, ros-navigation 算法.
+\end{itemize}
+\end{onehalfspacing}
+
 
 
 \section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
+\begin{itemize}[parsep=0.5ex]
+\item {\datedline{\textit{Competition Expert Tier. TOP 0.67\%(1072/159,193)}}{2019.12}}
+\item {\datedline{\textit{个人银牌, PB Top 6\%(30/546)} Lyft 3D Object Detection for Autonomous Vehicles Kaggle Competition}{ 2019.12}}
+\item {\datedline{\textit{LB Top 7\%(182/2427); PB Top 13\%(301/2427)} Severstal: Steel Defect Detection Kaggle Competition}{2019.10}}
+\item {\datedline{\textit{个人银牌, PB Top 2\%(55/2928).} APTOS 2019 Blindness Detection Competition Kaggle Competition}{ 2019.9}}
+\item {\datedline{\textit{一等} 专业奖学金}{Apr. 2014}}
+\item {\datedline{\textit{二等奖 领队} 中国大学生数学建模竞赛(CUMCM)}{2013.9}}
+\item {\datedline{\textit{一等奖 领队} 2013年东北三省数学建模联赛}{2013.5}}
+\end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+
 
 \section{\faCogs\ IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+  \item 编程语言: Python > Java > C++
+  \item 平台: Linux,Docker
+  \item 工具: Pytorch
 \end{itemize}
 
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+\datedsubsection{\textbf{黑龙江八一农垦大学}, 大庆, 黑龙江}{2011 -- 2015}
+\textit{学士}\ 信息与计算科学
 
 
 
 \section{\faInfo\ 其他}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+  \item Kaggle: https://www.kaggle.com/oceanwong
+  \item GitHub: https://github.com/OceanWong1991
+  \item homepage: https://oceanwong1991.github.io/
+  \item 语言: 英语 - 熟练
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}
