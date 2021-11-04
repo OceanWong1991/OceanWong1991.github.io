@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[
+  letterpaper,
+  margin=1in,
+  headsep=4pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{tgschola}
+\usepackage{lastpage}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.2}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{%
+  \footnotesize\sffamily
+  \yourname\quad
+  web: \textcolor{black}{\itshape\yourweb}\quad
+  \textcolor{black}{\youremail}}
+% \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+
+\newcommand{\soptitle}{Statement Of Intent}
+
+\newcommand{\yourname}{Ocean Wong}
+\newcommand{\youremail}{OceanWong1991@gmail.com}
+\newcommand{\yourweb}{https://oceanwong1991.github.io/}
+
+\newcommand{\statement}[1]{\par\medskip
+  \underline{\textcolor{black}{\textbf{#1:}}}\space
+}
+
+\usepackage[
+  colorlinks,
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode
+]{hyperref}
+
+\begin{document}
+
+\begin{center}\LARGE\soptitle\\
+\large of \yourname\ (CS Master applicant for Dec---2022)
+\end{center}
+
+\hrule
+\vspace{1pt}
+\hrule height 1pt
+
+\bigskip
+
+\end{document}
