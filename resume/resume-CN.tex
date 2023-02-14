@@ -32,10 +32,22 @@
 
 \begin{itemize}
   \item 在机器学习,深度学习及计算机视觉有4年+ 的经验
-  \item 主导过很多从概念到实现并落地的AI项目
+  \item 主导过一些AI项目并成功落地
   \item 较强的沟通,团队合作能力
   \item 很强的学习,调研能力;并以结果为导向解决工程性问题
 \end{itemize}
+
+\datedsubsection{\textbf{Leak gas detection and 3-D Reconstruction}}{2022年3月 -- 2022年12月}
+\role{Python, Darknet, Pytorch, Linux}{助研}
+\begin{onehalfspacing}
+商用车盲区检测系统(BSD)主要是对商用车盲区行人跟车辆的检测,当驾驶员变道或泊车时提供视觉或声音上的提示,帮助驾驶员安全驾驶.由于模型需要在低端车机芯片上运行,因此需要严格的控制模型大小并且保证检出结果的准确性.
+
+\begin{itemize}
+  \item 设计数据处理,分析模块.针对鱼眼视图数据设计出一套自动数据打标签系统,提升90\%+ 数据标注效率;根据回传数据主动分析模型盲点,针对性添加数据增强模型鲁棒性并最大化避免对有效数据的稀释
+  \item 设计并训练主要的检测模型.(1.backbone 的变化, 2. YOLOV5 anchor匹配机制, 3.Mosic及Mixup 数据增广的使用, 4.YOLOX Decouple head:reg, cls, obj)
+  \item 模型优化.为了使模型能够在低端芯片上运行(例如:全志T5),对模型进行了最大化剪枝,最终使模型的计算量由1.2BFlops减至0.139 BFlops,mAP由90\% 增加至 95\%
+\end{itemize}
+\end{onehalfspacing}
 
 \datedsubsection{\textbf{商用车盲区监测}}{2020年2月 -- 2021年2月}
 \role{Python, Darknet, Pytorch, Linux}{项目负责人}
@@ -82,7 +94,7 @@ DSM:使用红外相机图片对驾驶员行为进行检测分析(分神,打瞌�
 \item {\datedline{\textit{个人银牌, PB Top 6\%(30/546)} Lyft 3D Object Detection for Autonomous Vehicles Kaggle Competition}{ 2019.12}}
 \item {\datedline{\textit{LB Top 7\%(182/2427); PB Top 13\%(301/2427)} Severstal: Steel Defect Detection Kaggle Competition}{2019.10}}
 \item {\datedline{\textit{个人银牌, PB Top 2\%(55/2928).} APTOS 2019 Blindness Detection Competition Kaggle Competition}{ 2019.9}}
-\item {\datedline{\textit{一等} 专业奖学金}{Apr. 2014}}
+\item {\datedline{\textit{一等} 专业奖学金}{2014.4}}
 \item {\datedline{\textit{二等奖 领队} 中国大学生数学建模竞赛(CUMCM)}{2013.9}}
 \item {\datedline{\textit{一等奖 领队} 2013年东北三省数学建模联赛}{2013.5}}
 \end{itemize}
@@ -109,7 +121,7 @@ DSM:使用红外相机图片对驾驶员行为进行检测分析(分神,打瞌�
   \item Kaggle: https://www.kaggle.com/oceanwong
   \item GitHub: https://github.com/OceanWong1991
   \item homepage: https://oceanwong1991.github.io/
-  \item 语言: 英语 - 熟练
+  \item 语言: 英语 - 熟练 IELTS 7.0
 \end{itemize}
 
 \end{document}
