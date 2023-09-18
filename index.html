@@ -177,9 +177,9 @@
                   </p>
                   <p>The main work of the project includes the following aspects:</p>
 
-                  <li>Data parsing and alignment: Parse the four-channel video signals and CAN signals, extract the video frames and vehicle state information, and align the data according to the timestamps, ensuring the data synchronization. This part of the data is used for the simulation system, simulating the real road scenarios and vehicle behaviors.</li>
-                  <li>Lidar and camera fusion: Use Kalman filter to fuse the lidar and camera data, use point cloud projection and image bounding box methods to obtain accurate distance and image category, and use Kalman filter to track the objects, thus achieving the detection and recognition of obstacles around the vehicle. This part of the data is used for the real-time system, providing the vehicle with environment perception capability.</li>
-                  <li>Lidar and radar fusion: Use extended Kalman filter to fuse the lidar and radar data, improving the estimation accuracy of the distance and speed of the obstacles. This part of the data is used for the auxiliary system, providing the vehicle with safety warning capability. </li>
+                  <li>Data parsing and alignment: Parse the data from four video signals and CAN signals, extract the video frames and vehicle state information, and align the data according to the timestamps, ensuring the data synchronization.</li>
+                  <li>Design and implement the radar-camera fusion scheme: Use the extended Kalman filter to fuse the radar and camera data, adopt the point cloud projection and image bounding box method, obtain the accurate distance and image category, and use the extended Kalman filter to track the objects, thereby achieving the detection and recognition of obstacles around the vehicle.</li>
+                  <li>Design the lidar-radar fusion scheme: Use the unscented Kalman filter to fuse the lidar and radar data, improve the estimation accuracy of the distance and velocity of obstacles. </li>
                 </td>
               </tr>
           </table>
