@@ -178,8 +178,7 @@
                   <p>The main work of the project includes the following aspects:</p>
 
                   <li>Data parsing and alignment: Parse the data from four video signals and CAN signals, extract the video frames and vehicle state information, and align the data according to the timestamps, ensuring the data synchronization.</li>
-                  <li>Design and implement the radar-camera fusion scheme: Use the extended Kalman filter to fuse the radar and camera data, adopt the point cloud projection and image bounding box method, obtain the accurate distance and image category, and use the extended Kalman filter to track the objects, thereby achieving the detection and recognition of obstacles around the vehicle.</li>
-                  <li>Design the lidar-radar fusion scheme: Use the unscented Kalman filter to fuse the lidar and radar data, improve the estimation accuracy of the distance and velocity of obstacles. </li>
+                  <li>Design and implement a millimeter-wave radar and camera fusion scheme, achieve spatial and temporal synchronization of the two sensors, perform point cloud clustering on the millimeter-wave radar data, use UKF to track multiple targets, associate targets, and thus achieve detection and identification of obstacles around the vehicle1.</li>
                 </td>
               </tr>
           </table>
