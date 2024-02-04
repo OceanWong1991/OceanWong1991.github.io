@@ -170,11 +170,9 @@
                   Combined navigation is a sophisticated navigation system that integrates information from multiple sensors, including Inertial Measurement Unit (IMU), Global Navigation Satellite System (GNSS), and odometer sensors. The system employs the Error State Kalman Filter (ESKF) for state estimation and error correction. 
                 </p>
                 <p>The key tasks of this combined navigation system are:</p>
-                
-
-                <li>1. IMU Initialization: The system initiates the IMU by estimating the sensor measurement noise and zero biases. This involves calibrating and setting up the IMU to ensure accurate and reliable measurements.</li>
-                <li>2. GNSS Data Processing: The system processes data from GNSS receivers.The GNSS data is transformed into the UTM (Universal Transverse Mercator) coordinate system for consistent and accurate positioning.</li>
-                <li>3. ESKF Implementation: The main focus of the system is on implementing the Error State Kalman Filter (ESKF) for state estimation.
+                <li>IMU Initialization: The system initiates the IMU by estimating the sensor measurement noise and zero biases. This involves calibrating and setting up the IMU to ensure accurate and reliable measurements.</li>
+                <li>GNSS Data Processing: The system processes data from GNSS receivers.The GNSS data is transformed into the UTM (Universal Transverse Mercator) coordinate system for consistent and accurate positioning.</li>
+                <li>ESKF Implementation: The main focus of the system is on implementing the Error State Kalman Filter (ESKF) for state estimation.
                   The ESKF is a recursive algorithm that continuously updates the system's state estimates based on sensor measurements and system dynamics.
                   It corrects errors and improves the accuracy of the navigation solution by considering the error states in the estimation.</li>
               </td>
