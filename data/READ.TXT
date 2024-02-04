@@ -1,3 +1,26 @@
 1. IMU 初始化，估算IMU传感器测量噪声和零偏
 2. GNSS data process, gps to utm
 3. 实现ESKF
+
+
+开发车道线跟踪匹配算法，保证车道线在存在漏检、遮挡等问题时检测稳定性，
+1.提取上一帧检测车道线结果，并计算相应的车道线在航迹推算下坐标信息
+2.循环取出历史车道线并分别与当前帧检测的车道线进行匹配，主要比较车道线角度、与两车道线距离大小是否满足条件。
+由于车道线检测结果基于segment 结果，segment结果不稳定存在高斯噪声，导致车道线在匹配时表现并不好，很多匹配错误的场景，尤其是在双线、三线的场景下。于是我提出了新的改良方案：
+1. 提出了车道线Bundle 概念，先进行Bundle 匹配(Bundle可理解为车道线束，可能包含多条车道线，Bundle也存在坐标、角度等信息)
+2. Bundle匹配完成再进行Bundle内部的车道线匹配，为了优化算法减少路口时不同车道线匹配错误的问题，引入了车道线IOU概念，使用权重机制，分别计算角度、距离、IOU数值和，其数之和最高且高于一定阈值的即为相匹配的车道线。
+此种算法大大提升了车道线匹配的准确度，准确度由原来的80%提升到96%
+
+Developing a lane line tracking and matching algorithm to ensure detection stability in the presence of issues such as missed detections and occlusions. The approach involves the following steps:
+
+1. Extracting lane line results from the previous frame and calculating the corresponding coordinates based on trajectory estimation.
+
+2. Iteratively retrieving historical lane lines and matching them with the lane lines detected in the current frame. The primary criteria for comparison include lane line angles and distances between two lane lines.
+
+However, due to the instability of segment results, which are the basis for lane line detection, caused by Gaussian noise, the lane lines do not perform well in matching, resulting in numerous matching errors, especially in scenarios with dual or triple lines. Consequently, I proposed an improved solution:
+
+1. Introducing the concept of Lane Line Bundles, where a Bundle can be understood as a group of lane lines, potentially containing multiple lane lines, each with its own coordinates and angles.
+
+2. Performing Bundle matching first and then proceeding with the internal lane line matching within the Bundle. To optimize the algorithm and reduce errors in matching different lane lines at intersections, the Lane Line Intersection over Union (IOU) concept was introduced. Using a weighted mechanism, angles, distances, and IOU values are separately calculated and summed, and the lane line with the highest sum, exceeding a certain threshold, is considered a matched lane line.
+
+This algorithm significantly enhances the accuracy of lane line matching, improving it from 80% to 96% compared to the original algorithm.
