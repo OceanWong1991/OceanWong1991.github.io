@@ -24,3 +24,12 @@ However, due to the instability of segment results, which are the basis for lane
 2. Performing Bundle matching first and then proceeding with the internal lane line matching within the Bundle. To optimize the algorithm and reduce errors in matching different lane lines at intersections, the Lane Line Intersection over Union (IOU) concept was introduced. Using a weighted mechanism, angles, distances, and IOU values are separately calculated and summed, and the lane line with the highest sum, exceeding a certain threshold, is considered a matched lane line.
 
 This algorithm significantly enhances the accuracy of lane line matching, improving it from 80% to 96% compared to the original algorithm.
+
+
+在本机上做场景仿真测试，独自开发了一套可视化仿真系统，可以通过录制的数据，完成时间戳对齐，模拟真实场景来测试代码。大大降低了测试成本同时增加了测试结果的可信度
+
+
+
+
+
+
